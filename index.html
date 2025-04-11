@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios profesionales de electricidad. Instalaciones, reparaciones y mantenimiento eléctrico con garantía y seguridad.">
+    <title>ElectroSoluciones - Servicios Eléctricos Profesionales</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="ElectroSoluciones Logo" class="logo-img">
+                        <span>Electro<strong>Soluciones</strong></span>
+                    </a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                    <li><a href="./html/contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Soluciones Eléctricas Profesionales</h1>
+                <p>Electricista certificado con más de 10 años de experiencia en instalaciones, reparaciones y mantenimiento eléctrico residencial y comercial.</p>
+                <div class="hero-btns">
+                    <a href="./html/contacto.html" class="btn btn-primary">Solicitar Presupuesto</a>
+                    <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./img/hero-electrician.jpg" alt="Electricista profesional">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificado</h3>
+                    <p>Profesionales certificados y con amplia experiencia en el sector eléctrico.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Respuesta Rápida</h3>
+                    <p>Servicio de emergencia disponible 24/7 para resolver tus problemas eléctricos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garantía</h3>
+                    <p>Todos nuestros trabajos cuentan con garantía por escrito.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Precios Justos</h3>
+                    <p>Presupuestos claros sin costos ocultos ni sorpresas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos una amplia gama de servicios eléctricos para hogares y negocios</p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <img src="./img/instalacion.jpg" alt="Instalaciones Eléctricas">
+                    <h3>Instalaciones Eléctricas</h3>
+                    <p>Instalaciones nuevas, renovaciones y ampliaciones de sistemas eléctricos cumpliendo con todas las normativas.</p>
+                    <a href="./html/servicios.html#instalaciones" class="btn-text">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <img src="./img/reparacion.jpg" alt="Reparaciones Eléctricas">
+                    <h3>Reparaciones y Diagnósticos</h3>
+                    <p>Detección y solución de fallas en el sistema eléctrico, cortocircuitos y problemas de sobrecarga.</p>
+                    <a href="./html/servicios.html#reparaciones" class="btn-text">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <img src="./img/mantenimiento.jpg" alt="Mantenimiento Eléctrico">
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Revisiones periódicas para prevenir fallos y garantizar el funcionamiento óptimo de tu sistema eléctrico.</p>
+                    <a href="./html/servicios.html#mantenimiento" class="btn-text">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <img src="./img/ahorro.jpg" alt="Eficiencia Energética">
+                    <h3>Eficiencia Energética</h3>
+                    <p>Soluciones para reducir el consumo eléctrico y ahorrar en tu factura mensual.</p>
+                    <a href="./html/servicios.html#eficiencia" class="btn-text">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <img src="./img/domotica.jpg" alt="Domótica">
+                    <h3>Domótica e Iluminación</h3>
+                    <p>Instalación de sistemas de automatización del hogar e iluminación inteligente.</p>
+                    <a href="./html/servicios.html#domotica" class="btn-text">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card">
+                    <img src="./img/emergencia.jpg" alt="Servicios de Emergencia">
+                    <h3>Servicios de Emergencia</h3>
+                    <p>Atención inmediata para resolver urgencias eléctricas en cualquier momento.</p>
+                    <a href="./html/servicios.html#emergencia" class="btn-text">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Problemas eléctricos?</h2>
+                <p>No arriesgues tu seguridad. Contáctanos ahora para una solución profesional y garantizada.</p>
+                <a href="./html/contacto.html" class="btn btn-cta">Contactar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="proyectos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos Realizados</h2>
+                <p>Algunos de nuestros trabajos recientes</p>
+            </div>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <div class="proyecto-img">
+                        <img src="./img/proyecto1.jpg" alt="Instalación Residencial">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" data-id="proyecto1">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <h3>Instalación Residencial</h3>
+                    <p>Instalación completa en vivienda unifamiliar</p>
+                </div>
+                <div class="proyecto-card">
+                    <div class="proyecto-img">
+                        <img src="./img/proyecto2.jpg" alt="Iluminación Comercial">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" data-id="proyecto2">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <h3>Iluminación Comercial</h3>
+                    <p>Sistema de iluminación LED para local comercial</p>
+                </div>
+                <div class="proyecto-card">
+                    <div class="proyecto-img">
+                        <img src="./img/proyecto3.jpg" alt="Automatización">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" data-id="proyecto3">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <h3>Domótica Residencial</h3>
+                    <p>Sistema de automatización para hogar inteligente</p>
+                </div>
+                <div class="proyecto-card">
+                    <div class="proyecto-img">
+                        <img src="./img/proyecto4.jpg" alt="Instalación Industrial">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" data-id="proyecto4">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <h3>Instalación Industrial</h3>
+                    <p>Instalación eléctrica para pequeña industria</p>
+                </div>
+            </div>
+            <!-- Modal para detalles de proyectos -->
+            <div id="proyecto-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div id="modal-content-container"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonios de Clientes</h2>
+                <p>Lo que dicen nuestros clientes sobre nuestro trabajo</p>
+            </div>
+            <div class="testimonios-slider">
+                <div class="testimonio-slide active">
+                    <div class="testimonio-content">
+                        <div class="testimonio-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonio-text">"Excelente servicio y profesionalismo. Solucionaron un problema eléctrico complejo que otros no pudieron resolver. Muy recomendable."</p>
+                        <div class="testimonio-author">
+                            <img src="./img/cliente1.jpg" alt="Cliente 1">
+                            <div class="author-info">
+                                <h4>Carlos Méndez</h4>
+                                <p>Cliente Residencial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-slide">
+                    <div class="testimonio-content">
+                        <div class="testimonio-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonio-text">"Instalaron todo el sistema eléctrico de mi negocio con gran profesionalidad. Cumplieron con los plazos y el presupuesto acordado."</p>
+                        <div class="testimonio-author">
+                            <img src="./img/cliente2.jpg" alt="Cliente 2">
+                            <div class="author-info">
+                                <h4>Laura Jiménez</h4>
+                                <p>Propietaria de Local Comercial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-slide">
+                    <div class="testimonio-content">
+                        <div class="testimonio-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonio-text">"Rapidez, eficacia y buen precio. Acudieron de urgencia y solucionaron el problema en tiempo récord. Muy agradecido."</p>
+                        <div class="testimonio-author">
+                            <img src="./img/cliente3.jpg" alt="Cliente 3">
+                            <div class="author-info">
+                                <h4>Miguel Sánchez</h4>
+                                <p>Cliente Residencial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./img/logo-white.svg" alt="ElectroSoluciones Logo">
+                    <h3>ElectroSoluciones</h3>
+                    <p>Servicios eléctricos profesionales con garantía</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./html/servicios.html">Servicios</a></li>
+                        <li><a href="./html/proyectos.html">Proyectos</a></li>
+                        <li><a href="./html/contacto.html">Contacto</a></li>
+                        <li><a href="./html/presupuesto.html">Solicitar Presupuesto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@electrosoluciones.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Boletín Informativo</h4>
+                    <p>Suscríbete para recibir consejos y promociones</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn-submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ElectroSoluciones. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="./html/privacidad.html">Política de Privacidad</a>
+                    <a href="./html/terminos.html">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Datos para los modales de proyectos -->
+    <script>
+        const proyectosData = {
+            proyecto1: {
+                titulo: "Instalación Eléctrica Residencial",
+                ubicacion: "Villa Residencial, Ciudad",
+                descripcion: "Instalación completa del sistema eléctrico en una vivienda de 180m² incluyendo cuadro de distribución, cableado, iluminación y tomacorrientes.",
+                detalles: ["Instalación de cuadro general de protección", "Cableado completo con normativa actualizada", "Instalación de 24 puntos de luz", "32 tomas de corriente", "Sistema de protección diferencial"],
+                imagenes: ["./img/proyecto1.jpg", "./img/proyecto1.jpg", "./img/proyecto1.jpg"]
+            },
+            proyecto2: {
+                titulo: "Sistema de Iluminación LED Comercial",
+                ubicacion: "Centro Comercial Plaza, Ciudad",
+                descripcion: "Diseño e instalación de sistema de iluminación LED para tienda de ropa de 120m², logrando un ahorro energético del 40%.",
+                detalles: ["Estudio lumínico personalizado", "Instalación de 35 luminarias LED", "Sistema de control de intensidad", "Iluminación decorativa para escaparates", "Luces de emergencia"],
+                imagenes: ["./img/proyecto2.jpg", "./img/proyecto2.jpg", "./img/proyecto2.jpg"]
+            },
+            proyecto3: {
+                titulo: "Sistema Domótico Residencial",
+                ubicacion: "Urbanización Moderna, Ciudad",
+                descripcion: "Implementación de sistema domótico completo para control de iluminación, climatización, persianas y seguridad mediante aplicación móvil.",
+                detalles: ["Control centralizado de iluminación", "Automatización de persianas y toldos", "Programación de escenas personalizadas", "Control remoto vía smartphone", "Integración con asistentes de voz"],
+                imagenes: ["./img/proyecto3.jpg", "./img/proyecto3.jpg", "./img/proyecto3.jpg"]
+            },
+            proyecto4: {
+                titulo: "Instalación Eléctrica Industrial",
+                ubicacion: "Polígono Industrial Norte, Ciudad",
+                descripcion: "Instalación eléctrica completa para taller mecánico de 350m² con maquinaria especializada y sistema trifásico.",
+                detalles: ["Cuadro general de distribución industrial", "Sistema trifásico completo", "Tomas de corriente especiales para maquinaria", "Sistema de iluminación LED industrial", "Protección contra sobretensiones"],
+                imagenes: ["./img/proyecto4.jpg", "./img/proyecto4.jpg", "./img/proyecto4.jpg"]
+            }
+        };
+    </script>
+
+    <!-- Scripts -->
+    <script src="./js/script.js"></script>
+</body>
+</html>

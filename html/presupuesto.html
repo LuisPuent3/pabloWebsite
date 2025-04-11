@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicita un presupuesto personalizado para tus servicios eléctricos. Instalaciones, reparaciones y mantenimiento con los mejores profesionales.">
+    <title>Solicitar Presupuesto - ElectroSoluciones</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/presupuesto.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.svg" alt="ElectroSoluciones Logo" class="logo-img">
+                        <span>Electro<strong>Soluciones</strong></span>
+                    </a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="../html/servicios.html" class="nav-link">Servicios</a></li>
+                    <li><a href="../index.html#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="../index.html#testimonios" class="nav-link">Testimonios</a></li>
+                    <li><a href="../html/contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Solicitar Presupuesto</h1>
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a> / <span>Presupuesto</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presupuesto Form Section -->
+    <section class="presupuesto-section">
+        <div class="container">
+            <div class="presupuesto-intro">
+                <h2>Solicita tu Presupuesto Personalizado</h2>
+                <p>Completa el siguiente formulario con los detalles de tu proyecto y nos pondremos en contacto contigo en menos de 24 horas con un presupuesto detallado sin compromiso.</p>
+            </div>
+            
+            <div class="presupuesto-grid">
+                <div class="presupuesto-form-container">
+                    <form id="presupuesto-form" class="presupuesto-form">
+                        <h3>Información Personal</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="direccion">Dirección del Servicio</label>
+                            <input type="text" id="direccion" name="direccion">
+                        </div>
+                        
+                        <h3>Detalles del Servicio</h3>
+                        <div class="form-group">
+                            <label for="tipo-servicio">Tipo de Servicio *</label>
+                            <select id="tipo-servicio" name="tipo-servicio" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="instalacion">Instalación Eléctrica</option>
+                                <option value="reparacion">Reparación</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="eficiencia">Eficiencia Energética</option>
+                                <option value="domotica">Domótica e Iluminación</option>
+                                <option value="emergencia">Servicio de Emergencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="otro-servicio-container" style="display: none;">
+                            <label for="otro-servicio">Especifica el Servicio</label>
+                            <input type="text" id="otro-servicio" name="otro-servicio">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tipo-propiedad">Tipo de Propiedad *</label>
+                            <select id="tipo-propiedad" name="tipo-propiedad" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="residencial">Residencial</option>
+                                <option value="comercial">Comercial</option>
+                                <option value="industrial">Industrial</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="detalles">Describe tu Proyecto *</label>
+                            <textarea id="detalles" name="detalles" rows="5" required placeholder="Proporciona todos los detalles posibles sobre el servicio que necesitas. Cuanta más información nos proporciones, más preciso será nuestro presupuesto."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fecha-servicio">¿Cuándo necesitas el servicio?</label>
+                            <select id="fecha-servicio" name="fecha-servicio">
+                                <option value="lo-antes-posible">Lo antes posible</option>
+                                <option value="esta-semana">Esta semana</option>
+                                <option value="este-mes">Este mes</option>
+                                <option value="flexible">Soy flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="presupuesto-estimado">Presupuesto Estimado (Opcional)</label>
+                            <select id="presupuesto-estimado" name="presupuesto-estimado">
+                                <option value="">Selecciona un rango</option>
+                                <option value="menos-500">Menos de $500</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000-3000">$1,000 - $3,000</option>
+                                <option value="3000-5000">$3,000 - $5,000</option>
+                                <option value="mas-5000">Más de $5,000</option>
+                                <option value="no-seguro">No estoy seguro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adjuntar-foto">Adjuntar Foto (Opcional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="adjuntar-foto" name="adjuntar-foto" accept="image/*">
+                                <label for="adjuntar-foto" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i> Seleccionar Archivo
+                                </label>
+                                <span id="file-name">No hay archivo seleccionado</span>
+                            </div>
+                            <p class="form-help">Las fotos pueden ayudarnos a entender mejor tu proyecto.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="como-conociste">¿Cómo nos conociste?</label>
+                            <select id="como-conociste" name="como-conociste">
+                                <option value="">Selecciona una opción</option>
+                                <option value="google">Búsqueda en Google</option>
+                                <option value="redes-sociales">Redes Sociales</option>
+                                <option value="recomendacion">Recomendación</option>
+                                <option value="anuncio">Anuncio</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                Acepto la <a href="../html/privacidad.html">política de privacidad</a> y autorizo el tratamiento de mis datos.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Solicitud de Presupuesto</button>
+                    </form>
+                </div>
+                
+                <div class="presupuesto-info">
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Proceso de Presupuesto</h3>
+                        <ol class="process-list">
+                            <li>Envías la solicitud de presupuesto</li>
+                            <li>Analizamos tus necesidades</li>
+                            <li>Te contactamos si necesitamos más información</li>
+                            <li>Preparamos un presupuesto detallado</li>
+                            <li>Recibes el presupuesto en menos de 24h</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Garantías</h3>
+                        <ul class="benefit-list">
+                            <li><i class="fas fa-check"></i> Presupuesto sin compromiso</li>
+                            <li><i class="fas fa-check"></i> Precios transparentes sin sorpresas</li>
+                            <li><i class="fas fa-check"></i> Técnicos certificados</li>
+                            <li><i class="fas fa-check"></i> Garantía en todos los trabajos</li>
+                            <li><i class="fas fa-check"></i> Materiales de primeras marcas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>¿Prefieres llamarnos?</h3>
+                        <p>Si lo prefieres, puedes solicitar tu presupuesto por teléfono o enviarnos un WhatsApp.</p>
+                        <div class="contact-options">
+                            <a href="tel:+1234567890" class="contact-phone">
+                                <i class="fas fa-phone"></i> +123 456 7890
+                            </a>
+                            <a href="https://wa.me/1234567890" class="contact-whatsapp">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-box">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Solicité un presupuesto para la renovación eléctrica de mi hogar y quedé muy satisfecho con la rapidez y profesionalidad. El presupuesto fue detallado y sin costos ocultos.</p>
+                            <div class="testimonial-author">
+                                <img src="../img/cliente3.jpg" alt="Cliente">
+                                <div>
+                                    <h4>Antonio García</h4>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensaje de confirmación -->
+    <div id="confirmation-message" class="confirmation-message">
+        <div class="confirmation-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>¡Solicitud Enviada!</h3>
+            <p>Gracias por solicitar un presupuesto. Te contactaremos en menos de 24 horas con una propuesta personalizada.</p>
+            <button id="close-confirmation" class="btn btn-secondary">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../img/logo-white.svg" alt="ElectroSoluciones Logo">
+                    <h3>ElectroSoluciones</h3>
+                    <p>Servicios eléctricos profesionales con garantía</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../html/servicios.html">Servicios</a></li>
+                        <li><a href="../html/proyectos.html">Proyectos</a></li>
+                        <li><a href="../html/contacto.html">Contacto</a></li>
+                        <li><a href="../html/presupuesto.html">Solicitar Presupuesto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@electrosoluciones.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Boletín Informativo</h4>
+                    <p>Suscríbete para recibir consejos y promociones</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn-submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ElectroSoluciones. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="../html/privacidad.html">Política de Privacidad</a>
+                    <a href="../html/terminos.html">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/presupuesto.js"></script>
+</body>
+</html>

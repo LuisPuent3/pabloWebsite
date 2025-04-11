@@ -1,0 +1,483 @@
+/**
+ * Estilos específicos para la página de presupuesto
+ */
+
+/* ================= Presupuesto Section ================= */
+.presupuesto-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.presupuesto-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.presupuesto-intro h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.presupuesto-intro p {
+    color: var(--gray-text);
+}
+
+.presupuesto-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+/* ================= Presupuesto Form ================= */
+.presupuesto-form-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+}
+
+.presupuesto-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.presupuesto-form h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.presupuesto-form h3:first-child {
+    margin-top: 0;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.presupuesto-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.presupuesto-form input,
+.presupuesto-form select,
+.presupuesto-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.presupuesto-form input:focus,
+.presupuesto-form select:focus,
+.presupuesto-form textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.2);
+}
+
+.presupuesto-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.presupuesto-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232C3E50' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+.file-upload {
+    margin-bottom: var(--spacing-xs);
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.file-upload-label {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.file-upload-label:hover {
+    background-color: var(--border-color);
+}
+
+.file-upload-label i {
+    margin-right: var(--spacing-xs);
+}
+
+#file-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+.form-help {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    margin-top: 3px;
+}
+
+.checkbox-container {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--light-bg);
+    border-radius: 3px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: var(--border-color);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--secondary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.checkbox-container a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilos para errores de validación */
+.presupuesto-form input.error,
+.presupuesto-form select.error,
+.presupuesto-form textarea.error {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* ================= Presupuesto Info ================= */
+.presupuesto-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.info-box {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.info-icon i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.info-box h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.process-list {
+    counter-reset: process-counter;
+    padding-left: 30px;
+}
+
+.process-list li {
+    position: relative;
+    margin-bottom: var(--spacing-sm);
+    counter-increment: process-counter;
+}
+
+.process-list li::before {
+    content: counter(process-counter);
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.benefit-list {
+    padding-left: 5px;
+}
+
+.benefit-list li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+}
+
+.benefit-list li i {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.contact-phone,
+.contact-whatsapp {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.contact-phone {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+.contact-whatsapp {
+    background-color: #25D366;
+    color: var(--white);
+}
+
+.contact-phone:hover,
+.contact-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.contact-phone i,
+.contact-whatsapp i {
+    margin-right: var(--spacing-sm);
+}
+
+.testimonial-box {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    color: var(--white);
+    position: relative;
+}
+
+.testimonial-quote {
+    position: relative;
+    padding-left: 30px;
+}
+
+.testimonial-quote i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.testimonial-quote p {
+    color: var(--light-text);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: var(--spacing-sm);
+    border: 2px solid var(--white);
+}
+
+.testimonial-author h4 {
+    color: var(--white);
+    margin-bottom: 3px;
+}
+
+.testimonial-rating {
+    color: var(--secondary-color);
+}
+
+/* ================= Confirmation Message ================= */
+.confirmation-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.confirmation-content {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    max-width: 400px;
+    box-shadow: var(--shadow-strong);
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confirmation-content i {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.confirmation-content h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.confirmation-content p {
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-text);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 992px) {
+    .presupuesto-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .presupuesto-form-container {
+        order: 1;
+    }
+    
+    .presupuesto-info {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-options {
+        flex-direction: row;
+    }
+    
+    .contact-phone, .contact-whatsapp {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-options {
+        flex-direction: column;
+    }
+    
+    .presupuesto-form-container, .info-box {
+        padding: var(--spacing-md);
+    }
+}

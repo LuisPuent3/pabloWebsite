@@ -1,0 +1,304 @@
+/**
+ * Estilos específicos para la página de servicios
+ */
+
+/* ================= Servicios Nav ================= */
+.servicios-nav {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: var(--header-height);
+    z-index: 900;
+}
+
+.servicios-menu {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: var(--spacing-sm) 0;
+    white-space: nowrap;
+}
+
+.servicios-menu::-webkit-scrollbar {
+    height: 3px;
+}
+
+.servicios-menu::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 3px;
+}
+
+.servicios-menu::-webkit-scrollbar-track {
+    background-color: var(--light-bg);
+}
+
+.servicio-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--dark-text);
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+.servicio-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.servicio-link:hover, .servicio-link.active {
+    color: var(--secondary-color);
+}
+
+.servicio-link:hover::after, .servicio-link.active::after {
+    width: 80%;
+}
+
+/* ================= Servicio Detail ================= */
+.servicio-detail {
+    padding: var(--spacing-xl) 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.servicio-detail.animated {
+    opacity: 1;
+}
+
+.servicio-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.servicio-content.reverse {
+    grid-template-columns: 1.5fr 1fr;
+    direction: rtl;
+}
+
+.servicio-content.reverse > * {
+    direction: ltr;
+}
+
+.servicio-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.servicio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.servicio-detail:hover .servicio-image img {
+    transform: scale(1.05);
+}
+
+.servicio-info h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+    padding-bottom: var(--spacing-sm);
+    position: relative;
+}
+
+.servicio-info h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.servicio-intro {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-text);
+}
+
+.servicio-info h3 {
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.servicio-list {
+    margin-bottom: var(--spacing-lg);
+}
+
+.servicio-list li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: flex-start;
+}
+
+.servicio-list li i {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+    margin-top: 4px;
+}
+
+.servicio-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+/* Estilo para contacto de emergencia */
+.emergency-contact {
+    background-color: rgba(243, 156, 18, 0.1);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.emergency-contact h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.phone-emergency {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.phone-emergency i {
+    margin-right: var(--spacing-sm);
+}
+
+.emergency-note {
+    color: var(--gray-text);
+    font-style: italic;
+}
+
+/* ================= FAQ Section ================= */
+.faq-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.faq-icon {
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question h3 {
+    color: var(--secondary-color);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    padding: 0 var(--spacing-md);
+}
+
+.faq-answer p {
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-text);
+    padding-bottom: var(--spacing-md);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 992px) {
+    .servicio-content,
+    .servicio-content.reverse {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        direction: ltr;
+    }
+    
+    .servicio-image {
+        max-height: 400px;
+    }
+    
+    .servicio-cta {
+        flex-direction: column;
+    }
+    
+    .servicio-cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-menu {
+        justify-content: flex-start;
+        padding-bottom: var(--spacing-xs);
+    }
+    
+    .servicio-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    .servicio-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .servicio-detail {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .phone-emergency {
+        font-size: 1.2rem;
+    }
+    
+    .emergency-contact {
+        padding: var(--spacing-sm);
+    }
+    
+    .faq-question {
+        padding: var(--spacing-sm) 0;
+    }
+}
